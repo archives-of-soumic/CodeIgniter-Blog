@@ -12,6 +12,10 @@
 <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/googleapis.com.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 -->
+<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
 </head>
 <body>

@@ -52,20 +52,30 @@
                 $is_registered = $this->Registration_model->setCredentials($uname,$uemail,$upass);
                 if($is_registered == TRUE){ 
 
-                    echo '<script language="javascript">';
-                    echo 'alert(You have signed up successfully)';  //not showing an alert box.
-                    echo '</script>';
-                    echo "success! :D";
-                    redirect('/Login/','refresh'); 
+                    redirect('/Registration/newRegistrationSuccess','refresh'); 
                 }
                 else{ 
-                    echo '<script language="javascript">';
-                    echo 'alert(Sign up failed)';  //not showing an alert box.
-                    echo '</script>';
-                    redirect('/Register/','refresh');
+                   
+                    redirect('/Registration/newRegistrationFail','refresh');
                 }
             }
         
+        }
+
+        public function newRegistrationSuccess(){
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
+            echo '<br><hr><div><br>You have signed up successfully!</div>';
+            //$this->load->view('<div>You have signed up successfully!</div>');
+            $this->load->view('templates/footer');
+        }
+
+        public function newRegistrationFail(){
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
+            echo '<br><hr><div><br>You have failed to sign up!Please try again!</div>'; 
+            //$this->load->view('<div>You have failed to sign up!Please try again!</div>');
+            $this->load->view('templates/footer');
         }
 
 

@@ -12,6 +12,7 @@
           //redirect('/Home/','refresh');
            ?>
            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> WELCOME <?php echo $this->session->userdata['logged_in']['username']; ?></a>
+           <a href="<?php echo base_url() ?>index.php/Blog" class="w3-bar-item w3-button"> NEW BLOG</a>
            <a href="<?php echo base_url() ?>index.php/Login/logout" class="w3-bar-item w3-button"> SIGN OUT</a>
             <!--a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Sign Out</a-->
            <?php     
@@ -25,8 +26,8 @@
       ?>
       <!--a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Sign In</a>
       <a href="#Sign In" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Sign Up</a-->
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="<?php echo base_url() ?>index.php/Home/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="<?php echo base_url() ?>index.php/Home/contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 

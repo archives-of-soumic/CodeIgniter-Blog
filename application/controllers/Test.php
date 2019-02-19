@@ -4,12 +4,16 @@
             parent::__construct();
             $this->load->model('Registration_model');
             $this->load->model('Login_model');
+            $this->load->model('Home_model');
+            $this->load->model('Page_model');
+            $this->load->model('Blog_model');
+
         }
 
         public function index(){
             echo "welcome to tests\n<br>";
             echo "Login test <br>";
-            $this->test3();
+            $this->test5();
 
         }
 
@@ -42,7 +46,28 @@
         }
 
         function test3(){
-            $this->Login_model->getLoginAuth('fahimfarhan','secret');
+            $query = $this->Home_model-> getAllBlogs();
+            foreach ($query->result() as $row)
+            {
+                    echo $row->title;
+                    echo "<br>";
+                    echo $row->blog_id;
+                    echo "<br>";
+            }
+        }
+
+        function test4(){
+            $result_array = $this->Page_model->getPagContents(1);
+            echo $result_array['title'];
+            echo $result_array['author'];
+            echo $result_array['content'];
+            echo $result_array['category'];
+        }
+
+        function test5(){
+            $this->Blog_model->setBlog('ezio','fff','fff content', '#tags');
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
         }
     }
 ?>
