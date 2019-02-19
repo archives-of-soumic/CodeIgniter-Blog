@@ -5,7 +5,7 @@
             // load helper lib 
             $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
-            $this->load->library('session');
+            // $this->load->library('session');
             // load db 
             $this->load->model('Registration_model');
         }
@@ -14,10 +14,9 @@
 
         public function index(){
             $this->load->view('templates/header');
+            $this->load->view('templates/nav');
             $this->load->view('registration/registration_view');
             $this->load->view('templates/footer');
-            $this->load->view('templates/nav');
-            
         }
 
         public function index1(){
@@ -36,21 +35,35 @@
         }
         
         public function register_new_user(){
-            echo "here!1<br>";
+            // echo "here!1<br>";
             $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
             $this->form_validation->set_rules('email_value', 'Email', 'trim|required|xss_clean');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
-            
-            if($this->form_validation->run() == FALSE){
-                echo "here!3 <br>";
-            }else{           
+            $this->form_validation->run();
+
+            //if($this->form_validation->run() == FALSE){
+            //    echo "here!3 <br>";
+            //}else 
+            {           
                 $uname = $this->input->post('username');
                 $uemail = $this->input->post('email_value');
                 $upass = $this->input->post('password');
                 echo "here!4 <br>";
                 $is_registered = $this->Registration_model->setCredentials($uname,$uemail,$upass);
-                if($is_registered == TRUE){ echo "success! :D"; }
-                else{ echo "failed!!! :(";    }
+                if($is_registered == TRUE){ 
+
+                    echo '<script language="javascript">';
+                    echo 'alert(You have signed up successfully)';  //not showing an alert box.
+                    echo '</script>';
+                    echo "success! :D";
+                    redirect('/Login/','refresh'); 
+                }
+                else{ 
+                    echo '<script language="javascript">';
+                    echo 'alert(Sign up failed)';  //not showing an alert box.
+                    echo '</script>';
+                    redirect('/Register/','refresh');
+                }
             }
         
         }
