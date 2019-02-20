@@ -8,9 +8,9 @@
 
         public function setCredentials( $name, $email, $pass){
             // 1st check if username already exists or not 
-            $condition = "name= ".$name;
+            $condition = "name LIKE '".$name."'";
             $this->db->select('*');
-            $this->db->from('User');
+            $this->db->from('sql12279884.User');
             $this->db->where($condition);
 
             $query = $this->db->get();

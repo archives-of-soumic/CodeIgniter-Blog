@@ -3,7 +3,7 @@
         public function __construct(){  parent::__construct();  }
 
         public function getLoginAuth($user, $pass){
-            $condition = "name = '".$user."' AND pass = '".$pass."';";
+            $condition = "name = '".$user."' AND pass = '".$pass."'";
             $this->db->select('*');
             $this->db->from('User');
             $this->db->where($condition); 

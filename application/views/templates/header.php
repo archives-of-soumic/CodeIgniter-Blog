@@ -6,11 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/w3v4.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="https://fahimfarhan.github.io/css-js-expert-engine/CodeIgniter/fontawesome.min.css">
+<link rel="stylesheet" href="https://fahimfarhan.github.io/css-js-expert-engine/CodeIgniter/googleapis.com.css">
+<link rel="stylesheet" href="https://fahimfarhan.github.io/css-js-expert-engine/CodeIgniter/w3v4.css">
+
 <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/googleapis.com.css>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!--
   link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/fontawesome.min.css">
 <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/googleapis.com.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 -->
 <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
